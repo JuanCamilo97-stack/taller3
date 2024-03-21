@@ -5,12 +5,11 @@ const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
     userid: Number,
     name: String,
-    genero: String,
     NumRef: String,
     email: String,
     password: String,
 });
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model('talleres', userSchema);
 
 module.exports = User;

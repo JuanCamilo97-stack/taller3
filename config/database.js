@@ -4,10 +4,10 @@ let User;
 const connectDatabase = async () => {
     try {
         if(!User){
-            User = mongoose.model('User', require('../models/userModel').Schema);
+            User = mongoose.model('talleres', require('../models/userModel').Schema);
         }
 
-        await mongoose.connect('mongodb+srv://william271629:3218741020@clusternotasdb.6dhty9c.mongodb.net/')
+        await mongoose.connect('mongodb+srv://juanatehortua97:Camilo1010036676@cluster0.mg3yga1.mongodb.net/')
         .then(() => console.log('MongoDB connected'))
         .catch((err) => console.log(err));
 
@@ -23,21 +23,6 @@ const connectDatabase = async () => {
 
  const iniciarData = async () => {
      try {
-//         await User.insertMany([
-//             {
-//                 nombre: 'To Kill a Mockingbird',
-//                 genero: 'ficcion',
-//                 NumRef: 1123
-//             },
-//             {
-//                 nombre: 'hello world',
-//                 genero: 'terror',
-//                 NumRef: 113454
-//             }
-
-//         ]);
-
-//         await User.insertMany()
             console.log('Data duccessfully initialized');
         
         

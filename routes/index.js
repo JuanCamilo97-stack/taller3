@@ -9,7 +9,7 @@ const userController = require('../controllers/userController');
 const auth = require('../middleware/auth')
 
 
-// definicion de rutas y asignacion a funciones del controlador.
+// definicion de rutas y asignacion a funciones del controlador
 
 router.get('api/v1/users', auth.authenticate(), userController.getAllUsers);
 router.get('/api/v1/users/nombre/:name', userController.getUserByName);

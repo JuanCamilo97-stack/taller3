@@ -2,7 +2,7 @@ const passport = require('passport');
 const { Strategy, ExtractJwt} = require('passport-jwt');
 const User = require('../models/userModel');
 
-const jwt_secret = '##adsdsddsassadda##';
+const jwt_secret = '##adsdsddsassaddas##';
 
 const strategy = new Strategy(
     {
@@ -14,7 +14,7 @@ const strategy = new Strategy(
         try {
             const user = await User.findById({userid: jwtPayload.id})
             if (!user){
-                const error = new Error('User not found')
+                const error = new Error('User not found.')
                 console.log(error);
             }
             done(null, user);
